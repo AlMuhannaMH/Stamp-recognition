@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: stamp-recognition
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn myapp:app
+    plan: free
